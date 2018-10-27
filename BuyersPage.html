@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/BuyersPage.css">
+	<link rel="stylesheet" type="text/css" href="css/footer.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/header.css">
+	<link rel="stylesheet" type="text/css" href="css/Details.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<title></title>
+</head>
+<body>
+	<header>
+	
+			<h3>SAIDIA<span>Fruits</span></h3>
+  		<input type="checkbox" id="nav-toggle" class="nav-toggle">
+  		<nav>
+    		<ul>
+      			<li><a href="#">Home</a></li>
+      			<li><a href="#">Market Place</a></li>
+      			<li><a href="BuyersPage.html">Post Offer</a></li>
+      			<li><a href=>Contact</a></li>
+    		</ul>
+    		<div id="icon">
+    			<a href="Details.html" style="float: right;margin-left: 180px;"><i class="fa fa-user-circle-o" style="font-size: 40px;"></i></a>
+    			
+    			
+    		</div>
+  		</nav>
+  		<label for="nav-toggle" class="nav-toggle-label">
+    	<span></span>
+  		</label>
+	
+	</header>
+	<br><br>
+
+	<section>
+		<form>
+		<span id="top">ADD PRODUCT</span><br><br>
+		<div id="top1">
+			<span id="asterix">*</span><label>Add produce</label><br><br>
+			<input type="text" name="Pname" autocomplete="off" placeholder="Type produce" id="first">
+		</div>
+		<div id="top1">
+			<span id="asterix">*</span><label>AddPrice</label><br><br>
+			<input type="text" name="location" autocomplete="off" placeholder="Product Price" id="first">
+		</div>
+		<div id="top1">
+			<span id="asterix">*</span><label>Expiry date(in 60 days)</label><br><br>
+			<input type="date" name="date" autocomplete="off" placeholder="Expiry Date" id="first">
+		</div>
+		<div id="top1">
+			<span id="asterix">*</span><label>Quantity</label><br><br>
+			<input type="text" name="Pname" autocomplete="off" placeholder="in Kgs" id="first">
+		</div>
+		<div id="top1">
+			<span id="asterix">*</span><label>Quality</label><br><br>
+			<label class="container">Great
+  				<input type="radio" checked="checked" name="radio">
+ 				 <span class="checkmark"></span>
+				</label>
+				<label class="container">Good
+  				<input type="radio" name="radio">
+  				<span class="checkmark1"></span>
+				</label>
+				<label class="container">Average
+  				<input type="radio" name="radio">
+  				<span class="checkmark2"></span>
+				</label>
+		</div>
+
+		<input type="button" name="submit" value="Submit" id="submit" style="font-size: 24px;">
+		
+	
+	</section>
+	<aside>
+		
+		<table>
+			<caption>Add Image</caption>
+			<thead>
+				<div>
+					<td><img id="imgfileupload" alt="Select File" title="Select File" src="images/addimage2.png" style="cursor: pointer;"></td><br>
+					<span id="spnFilePath"></span>
+					<input type="file" id="fileupload1" style="display: none;"/>
+				</div>
+				<div>
+					<td><img id="imgfileupload" alt="Select File" title="Select File" src="images/addimage2.png" style="cursor: pointer;"></td><br>
+					<span id="spnFilePath"></span>
+					<input type="file" id="fileupload1" style="display: none;"/>
+				</div>
+				
+			</thead>
+			<tr>
+				<div>
+					<td><img id="imgfileupload" alt="Select File" title="Select File" src="images/addimage2.png" style="cursor: pointer;"></td><br>
+					<span id="spnFilePath"></span>
+					<input type="file" id="fileupload1" style="display: none;"/>
+				</div>
+				<div>
+					<td><img id="imgfileupload" alt="Select File" title="Select File" src="images/addimage2.png" style="cursor: pointer;"></td><br>
+					<span id="spnFilePath"></span>
+					<input type="file" id="fileupload1" style="display: none;"/>
+				</div>
+			</tr>
+			
+		</table>	
+		</form>	
+	</aside>
+
+<script type="text/javascript">
+    window.onload = function () {
+        var fileupload = document.getElementById("fileupload1");
+        var filePath = document.getElementById("spnFilePath");
+        var image = document.getElementById("imgfileupload");
+        image.onclick = function () {
+            fileupload.click();
+        };
+        fileupload.onchange = function () {
+            var fileName = fileupload.value.split('\\')[fileupload.value.split('\\').length - 1];
+            filePath.innerHTML = "<b>Selected File: </b>" + fileName;
+        };
+    };
+</script>
+</body>
+
+</html>
